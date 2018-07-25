@@ -94,7 +94,9 @@ namespace NodeApp1
             //获取那行对应的IP地址
             String name = dataGridView1.Rows[row].Cells["Name"].Value.ToString();
             String path = Commans.workPath+ "\\" + name;
-            webBrowser1.Navigate(path);
+            //webBrowser1.Navigate(path);
+            showFile(path);
+            openFile(path);
         }
         //预览按钮
         private void button4_Click(object sender, EventArgs e)
@@ -121,11 +123,11 @@ namespace NodeApp1
         //创建按钮
         private void button1_Click(object sender, EventArgs e)
         {
-            //获取用户选择的行
-            int row = this.dataGridView1.CurrentRow.Index;
-            //获取那行对应的IP地址
-            String name = dataGridView1.Rows[row].Cells["Name"].Value.ToString();
-            String path = Commans.workPath + "\\" + name;
+            ////获取用户选择的行
+            //int row = this.dataGridView1.CurrentRow.Index;
+            ////获取那行对应的IP地址
+            //String name = dataGridView1.Rows[row].Cells["Name"].Value.ToString();
+            //String path = Commans.workPath + "\\" + name;
                 //这里还是可以独立出来成为一个获得路径函数
             AskFileName askFileName = new AskFileName(this);//这里注意，这个新窗口和原来的主窗口是在不同进程中，所以下面如果直接写一些操作，
                                                         //但是这些操作需要等到用户输入完文件姓名的话，就会出现错误，因为两个进程并发执行，、

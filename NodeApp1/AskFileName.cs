@@ -74,9 +74,22 @@ namespace NodeApp1
             this.Close();
             this.Dispose();
             form.initCatalogue();
+            //但是上面这个showFile执行了！！！！
             form.showFile(path);
+            //这里现在有一个问题，这个并没有自动打开???
             form.openFile(path);
+            
             return;
         }
+
+        //private void AskFileName_KeyDown(object sender, KeyEventArgs e)
+        //{
+          
+        //}
+
+        //private void button1_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    button1_Click(sender, e);
+        //}
     }
 }

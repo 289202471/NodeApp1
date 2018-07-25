@@ -50,6 +50,7 @@
             this.button1.Text = "确定";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            //this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
             // 
             // button2
             // 
@@ -63,14 +64,18 @@
             // 
             // AskFileName
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 205);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AskFileName";
-            this.Text = "AskFileName";
+            this.Text = "请输入文章标题";
+            //this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AskFileName_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
