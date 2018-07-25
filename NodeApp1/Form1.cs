@@ -14,6 +14,7 @@ namespace NodeApp1
 {
     public partial class Form1 : Form
     {
+        //窗口初始化函数
         public Form1()
         {
             InitializeComponent();
